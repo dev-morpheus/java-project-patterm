@@ -14,6 +14,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		
+		System.out.println("===========Singleton===========");
+		System.out.println("|                             |");
 		// Singleton
 		
 		SingletonLazy lazy = SingletonLazy.getInstancia();
@@ -31,6 +33,8 @@ public class Test {
 		lazyHolder = SingletonLazyHolder.getInstancia();
 		System.out.println(lazyHolder);
 		
+		System.out.println("============Strategy==========");
+		System.out.println("|                            |");
 		// Strategy
 		
 		Comportamento defensivo = new ComportamentoDefensivo();
@@ -40,18 +44,24 @@ public class Test {
 		Robo robo = new Robo();
 		robo.setComportamento(normal);
 		robo.mover();
-		robo.mover();
+		System.out.println("============================");
 		robo.setComportamento(defensivo);
 		robo.mover();
+		robo.mover();
+		System.out.println("============================");
 		robo.setComportamento(agressivo);
 		robo.mover();
 		robo.mover();
 		robo.mover();
+		robo.mover();
+		robo.mover();
 		
+		System.out.println("==========Facade============");
+		System.out.println("|                          |");
 		// Facade
 		
 		Facade facade = new Facade();
-		facade.migrarCliente("Venilton", "14801788");
+		facade.migrarCliente("Vitor", "1234567800");
 	}
 
 }
